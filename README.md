@@ -37,6 +37,20 @@ The analysis includes:
 
 The strongest feature in the model was redshift, while the photometric features contributed at smaller but measurable levels.
 
+### SHAP visualizations
+
+#### Local explanation
+
+![SHAP waterfall](shap_waterfall.png)
+
+#### Global feature impact
+
+![SHAP summary](shap_summary.png)
+
+#### Redshift dependence
+
+![Redshift SHAP dependence](shap_dependence_redshift.png)
+
 ---
 
 ## 2. Mechanistic Interpretability
@@ -68,6 +82,10 @@ The strongest recovery occurred in the later transformer layers. Patching the fi
 
 This provides a causal intervention-based view of model behavior, complementing the post-hoc SHAP analysis.
 
+### Activation patching
+
+![GPT-2 activation patching](activation_patching.png)
+
 ---
 
 ## Key Conceptual Link
@@ -89,9 +107,15 @@ Together, they provide a progression from **post-hoc feature attribution** towar
 ## Repository Structure
 
 ```text
-notebooks/
-├── 01_SDSS17_LightGBM_SHAP.ipynb
-└── 02_GPT2_Activation_Patching.ipynb
+XAI_project.ipynb
+XAI_project_2.ipynb
+
+shap_waterfall.png
+shap_summary.png
+shap_dependence_redshift.png
+activation_patching.png
+
+README.md
 
 figures/
 ├── shap_waterfall.png
